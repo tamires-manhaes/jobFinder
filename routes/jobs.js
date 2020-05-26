@@ -3,7 +3,6 @@
 const express = require('express');
 const router = express.Router();
 const job = require('../models/Job');
-const bodyparser = require('body-parser');
 
 router.get('/', (req, resp) => {
   resp.send('all good here');
