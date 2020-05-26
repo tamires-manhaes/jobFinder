@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const db = require('./database/connection');
+const bodyparser = require('body-parser');
+
+app.use(express.json());
 
 // db connection
 db
@@ -11,11 +14,12 @@ db
     console.error("error try to connect to db");
   });
 
-
 // routes
 app.get('/', (req, resp) => {
   resp.send("all good");
 });
+
+app.use('/jobs', require('./routes/jobs'));
 
 // porta 
 const port = 3000;
