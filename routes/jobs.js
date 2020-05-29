@@ -2,14 +2,16 @@
 
 const express = require('express');
 const router = express.Router();
-const job = require('../models/Job');
 
 router.get('/', (req, resp) => {
   resp.send('all good here');
 });
+
+router.get('/add', (req, resp) => {
+  resp.render('add');
+})
 // adicionar um novo job
 router.post('/add', (req, resp) => {
-
   const { title, salary, company, description, email, new_job } = req.body;
 
   job.create({
@@ -21,7 +23,8 @@ router.post('/add', (req, resp) => {
     new_job
   }).then( () => resp.json({ ok: true }) )
     .catch(err => console.error(err));
-
+    
 });
+
 
 module.exports = router;
