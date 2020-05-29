@@ -3,7 +3,6 @@ const handlebars = require('express-handlebars');
 const app = express();
 const db = require('./database/connection');
 const path = require('path');
-
 const Job = require('./models/Job');
 
 app.use(express.json());
