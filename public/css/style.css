@@ -32,12 +32,11 @@
 
 /* banner */
 #top-container{
-  padding: 110px;
+  padding: 100px;
   background-color: #F7F9Fc;
   border-bottom: 4px solid #050505;
   margin-bottom: 30px;
-  background-image: url("https://humanni.com.br/wp-content/uploads/2019/12/Curso-de-Desinibi%C3%A7%C3%A3o-BH-1080x500.png");
-  /* background-position: 0 100px; */
+  background-image: url("https://images.wallpaperscraft.com/image/code_lines_programming_130775_2560x1080.jpg");
   background-size: cover;
   color: #FFF;
   text-shadow: -2px 0 black;
@@ -53,7 +52,7 @@
 /* form  */
 
 #search-form{
-  padding: 30px 100px;
+  padding: 30px;
 }
 
 #search-form .col-md-10, #search-form .col-md-2{
@@ -80,7 +79,7 @@
 #job-list .list-group-item{
   margin-bottom: 8px;
   border: 1px solid #CCC;
-  padding: 15px 80px;
+  padding: 15px 60px 15px 20px;
   color: #212529;
   height: 120px;
 }
@@ -206,8 +205,8 @@
 }
 .back-link{
   position: absolute;
-  right: 100px;
-  top: 500px;
+  left: 100px;
+  bottom: 450px;
   border: 1px solid #F03E3E;
   padding: 5px 10px;
   transition: .5s;
@@ -254,10 +253,64 @@
   border: 1px solid transparent;
   border-radius: 0;
   margin-top: 20px;
-
 }
 
+/* View JOB */
+#job-view-container{
+  margin-top: 200px;
+}
+
+#job-view-container h1{
+  margin-bottom: 30px;
+} 
+
+.job-desc {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.main-color{
+  color: #F03E3E;
+}
+
+
 /* MOBILE */
+@media (max-width: 1190px){
+  .back-link{
+    bottom: 380px;
+  }
+}
+
+@media (max-width: 992px) {
+  #top-container {
+    padding: 70px;
+  }
+
+  #main-subtitle{
+    padding-bottom: 10px;
+  }
+
+  #jobs-container {
+    padding: 0 20px;
+  }
+  
+  .new-job-label{
+    right: 130px;
+  }
+
+  .list-group-item h2 {
+    font-size: 1.5rem;
+  }
+
+  .back-link{
+    bottom: 390px;
+    left: 30px;
+  }
+}
 
 @media (max-width: 481px){
   /* navbar */
@@ -300,6 +353,7 @@
   /* job views  */
   #job-view-container{
       font-size: 1.3rem;
+      margin-bottom: 50px;
   }
   .job-desc{
       width: 80%;
@@ -315,6 +369,11 @@
   }
   #form-box button{
       width: 100%;
+  }
+
+  .back-link{
+    left: 50%;
+    transform: translate(-50%, 50%);
   }
 }
 
