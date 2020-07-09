@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts":{
     "dev": "nodemon app.js",
-    "start": "node app.js"
+    "start": "yarn install && node app.js"
 
   },
   "dependencies": {
@@ -20,6 +20,6 @@
     "nodemon": "^2.0.4"
   },
   "engines": {
-    "node": "13.12.0"
+    "node": "^14.3.0"
   }
 }
