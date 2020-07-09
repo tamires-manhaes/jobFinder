@@ -56,6 +56,6 @@ app.get('/', (req, resp) => {
 });
 
 // porta 
-// const PORT = 3000;
+var port = process.env.PORT || 3000;
 
-// app.listen( PORT, ()=> { console.log(`listen on port ${PORT}`); } );
+app.listen( port );
