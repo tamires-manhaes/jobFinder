@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const Job = require('../models/Job');
+const crypto = require('crypto');
 
 router.get('/', (req, resp) => {
   resp.send('all good here');
@@ -26,11 +27,13 @@ router.get('/add', (req, resp) => {
 // adicionar um novo job
 router.post('/add', (req, resp) => {
   const { title, description, salary, company, email, new_job } = req.body;
+  const id = crypto.randomBytes(3).toString('HEX');
 
   console.log(` title: ${title}`)
 
   //inserir dados no sistema
   Job.create({
+    id,
     title ,
     description,
     salary ,
@@ -40,6 +43,5 @@ router.post('/add', (req, resp) => {
   }).then( () => resp.redirect('/') ).catch(err => console.log(err) );
 
 });
-
 
 module.exports = router;
