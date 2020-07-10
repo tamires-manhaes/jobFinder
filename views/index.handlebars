@@ -1,5 +1,5 @@
 <div id="top-container" class="container-fluid">
-  <h1 id="main-title" class="text-center">Encontre o emprego fdos seus sonhos</h1>
+  <h1 id="main-title" class="text-center">Encontre o emprego dos seus sonhos</h1>
   <p id="main-subtitle" class="text-center">Plataforma com vagas de tecnologia, direcionadas a home office</p>
 
   <form id="search-form" class="form-inline" action="/" method="GET">
@@ -24,6 +24,7 @@
           <ul id="job-list" class="list-group">
             {{#each jobs}}
               <li class="list-group-item {{#if dataValues.new_job}}new-job{{/if}}">
+                <p style="display: none;">{{dataValues.id}}</p>
                 <p>{{dataValues.company}}</p>
                 <h2>{{dataValues.title}}</h2>
                 <p>R${{dataValues.salary}}</p>
