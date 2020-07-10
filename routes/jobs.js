@@ -33,7 +33,6 @@ router.post('/add', (req, resp) => {
 
   //inserir dados no sistema
   Job.create({
-    id,
     title ,
     description,
     salary ,
