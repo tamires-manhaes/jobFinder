@@ -9,5 +9,5 @@
 >   -> *yarn dev*
 
 > - ***rotas de admin:***<br>
-> **/jobs/admin** : vizualiza todas as vagas em formato JSON
+> **/jobs/admin** : vizualiza todas as vagas em formato JSON<br>
 > **/jobs/remove** : view para deletar vaga pelo id
