@@ -17,7 +17,6 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/jobs', require('./routes/jobs'));
-app.use('/admin', require('./routes/admin'));
 
 // db connection
 db
@@ -54,7 +53,6 @@ app.get('/', (req, resp) => {
     });
   }
 });
-
 
 // porta 
 var port = process.env.PORT || 3000;
