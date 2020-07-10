@@ -27,7 +27,6 @@ router.get('/add', (req, resp) => {
 // adicionar um novo job
 router.post('/add', (req, resp) => {
   const { title, description, salary, company, email, new_job } = req.body;
-  const id = crypto.randomBytes(3).toString('HEX');
 
   console.log(` title: ${title}`)
 
@@ -42,5 +41,32 @@ router.post('/add', (req, resp) => {
   }).then( () => resp.redirect('/') ).catch(err => console.log(err) );
 
 });
+
+router.get('/admin', (res, resp) => {
+  Job.findAll()
+  .then(jobs => {
+    // resp.render('admin', { jobs });
+    resp.json(jobs);
+  })
+  .catch(err => console.log(err));
+});
+
+router.get('/remove', (req, resp) => {
+  resp.render('remove');
+});
+
+router.post('/remove/', (req, resp) => {
+  const { idVaga } = req.body;
+
+  console.log(`id: ${idVaga}`);
+
+  Job.destroy({ 
+    where: { id: idVaga }
+  }).then( () => {
+      resp.redirect('/') 
+    }).catch(err => console.log(err) );
+});
+
+
 
 module.exports = router;
