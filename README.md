@@ -8,6 +8,6 @@
 > - **Para rodar:**
 >   -> *yarn dev*
 
-> - ***rotas de admin:***
+> - ***rotas de admin:***<br>
 > **/jobs/admin** : vizualiza todas as vagas em formato JSON
 > **/jobs/remove** : view para deletar vaga pelo id
